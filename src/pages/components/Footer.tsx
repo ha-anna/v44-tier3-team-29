@@ -42,7 +42,6 @@ export default function Footer() {
           alt={'Artemis logo with a cat sitting on the right'}
           width={120}
           height={20}
-          CSSclass={''}
         />
       </Link>
       <p className='mr-auto'>
@@ -73,7 +72,6 @@ export default function Footer() {
               alt={'GitHub logo: Link to Artemis&apos;s Github Repository.'}
               width={16}
               height={16}
-              CSSclass={''}
             />
           </Link>
         </li>
@@ -86,7 +84,6 @@ export default function Footer() {
           alt={'GitHub logo: Link to Artemis&apos;s Github Repository.'}
           width={32}
           height={32}
-          CSSclass={''}
         />
       </Link>
     </div>

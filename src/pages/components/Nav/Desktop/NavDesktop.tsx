@@ -1,10 +1,18 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import UserMenuDesktop from './UserMenuDesktop'
 import SigninSignupDesktop from './SigninSignupDesktop'
 import ActiveLink from './ActiveLink'
 import { TMenuItems } from '../../../../lib/types/MenuItemTypes'
 
 export default function NavDesktop({ isLoggedIn }: { isLoggedIn: boolean }) {
+  const [menuComponent, setMenuComponent] = useState<JSX.Element>()
+
+  useEffect(() => {
+    setMenuComponent(() => {
+      return isLoggedIn ? <UserMenuDesktop /> : <SigninSignupDesktop />
+    })
+  }, [])
+
   const menuItems: TMenuItems = [
     {
       href: '/create-post',
@@ -40,8 +48,7 @@ export default function NavDesktop({ isLoggedIn }: { isLoggedIn: boolean }) {
           </li>
         ))}
       </ul>
-      {isLoggedIn && <UserMenuDesktop />}
-      {!isLoggedIn && <SigninSignupDesktop />}
+      {menuComponent}
     </nav>
   )
 }

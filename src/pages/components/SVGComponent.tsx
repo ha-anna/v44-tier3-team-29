@@ -5,7 +5,7 @@ interface SVGComponentProps {
   alt: string
   width: number
   height: number
-  CSSclass: string
+  CSSclass?: string
 }
 
 const SVGComponent: React.FC<SVGComponentProps> = ({

@@ -9,6 +9,7 @@ import { selectAuth } from '@/lib/store/features/auth/authSlice'
 
 export default function Nav() {
   const [windowWidth, setWindowWidth] = useState(0)
+  const [navComponent, setNavComponent] = useState<JSX.Element>()
   const user = useAppSelector(selectAuth)
 
   useEffect(() => {
@@ -27,6 +28,12 @@ export default function Nav() {
     }
   }, [])
 
+  useEffect(() => {
+    windowWidth >= 900
+      ? setNavComponent(<NavDesktop isLoggedIn={user.isLoggedIn} />)
+      : setNavComponent(<NavMobile isLoggedIn={user.isLoggedIn} />)
+  }, [windowWidth])
+
   return (
     <div className='flex justify-between p-4 text-xl items-center relative z-50'>
       <h1 className='sr-only'>Artemis</h1>
@@ -38,14 +45,9 @@ export default function Nav() {
           alt={'Artemis logo with a cat sitting on the right'}
           width={206}
           height={41}
-          CSSclass={''}
         />
       </Link>
-      {windowWidth >= 900 ? (
-        <NavDesktop isLoggedIn={user.isLoggedIn} />
-      ) : (
-        <NavMobile isLoggedIn={user.isLoggedIn} />
-      )}
+      {navComponent}
     </div>
   )
 }

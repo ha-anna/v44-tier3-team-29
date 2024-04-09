@@ -11,13 +11,12 @@ export default function NotificationMenu() {
         <button
           type='button'
           aria-label='Notification'
-          className='px-3 py-2 min-w-[33px]'>
+          className='px-3 py-2'>
           <SVGComponent
             url={'/images/icons/notification-icon.svg'}
             alt={''}
             width={33}
             height={33}
-            CSSclass={'min-w-[33px]'}
           />
         </button>
       </DropdownMenu.Trigger>

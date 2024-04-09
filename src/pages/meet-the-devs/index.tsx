@@ -43,7 +43,9 @@ export default function MeetTheDevs() {
   return (
     <Layout>
       <div className='mb-[150px] relative z-[1] p-5 mt-10 flex flex-col items-center'>
-        <h2 className='text-5xl lg:text-6xl mb-8 mt-16 text-center'>Meet the Devs</h2>
+        <h2 className='text-5xl lg:text-6xl mb-8 mt-16 text-center'>
+          Meet the Devs
+        </h2>
         <div className='p-4 max-w-[1200px] grid grid-cols-1 lg:grid-cols-2 gap-16 justify-center items-center'>
           {devsInfos.map(dev => {
             return (
@@ -56,7 +58,6 @@ export default function MeetTheDevs() {
                     alt={''}
                     width={46}
                     height={46}
-                    CSSclass={''}
                   />
                   <div className='ml-3 mt-1.5'>
                     <h3 className='capitalize font-semibold'>{dev.name}</h3>
@@ -75,14 +76,18 @@ export default function MeetTheDevs() {
         alt={''}
         width={100}
         height={100}
-        CSSclass={'absolute top-0 left-0 right-0 w-full h-full z-0 overflow-hidden hidden lg:block'}
+        CSSclass={
+          'absolute top-0 left-0 right-0 w-full h-full z-0 overflow-hidden hidden lg:block'
+        }
       />
       <SVGComponent
         url={`/images/meet-the-devs-mobile.svg`}
         alt={''}
         width={100}
         height={100}
-        CSSclass={'absolute min-h-[150%] top-[100px] md:top-[150px] opacity-70 left-0 right-0 w-full h-full z-0 overflow-hidden lg:hidden'}
+        CSSclass={
+          'absolute min-h-[150%] top-[100px] md:top-[150px] opacity-70 left-0 right-0 w-full h-full z-0 overflow-hidden lg:hidden'
+        }
       />
     </Layout>
   )

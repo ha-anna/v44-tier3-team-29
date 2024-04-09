@@ -68,7 +68,6 @@ export default function UserMenuMobile() {
             alt={''}
             width={35}
             height={35}
-            CSSclass={'min-w-[33px]'}
           />
         </button>
       </DropdownMenu.Trigger>
@@ -88,7 +87,6 @@ export default function UserMenuMobile() {
                 alt={''}
                 width={50}
                 height={50}
-                CSSclass={''}
               />
               <p className='ml-3 truncate'>
                 {user?.username} <br />

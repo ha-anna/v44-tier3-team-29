@@ -40,7 +40,6 @@ export default function MenuMobile() {
             alt={''}
             width={35}
             height={35}
-            CSSclass={''}
           />
         </button>
       </DropdownMenu.Trigger>

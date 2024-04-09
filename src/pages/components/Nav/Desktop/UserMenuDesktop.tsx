@@ -50,7 +50,6 @@ export default function UserMenuDesktop() {
               alt={''}
               width={35}
               height={35}
-              CSSclass={''}
             />
           </button>
         </DropdownMenu.Trigger>
@@ -70,7 +69,6 @@ export default function UserMenuDesktop() {
                   alt={''}
                   width={50}
                   height={50}
-                  CSSclass={''}
                 />
                 <p className='ml-3 truncate'>
                   {user?.username} <br />
